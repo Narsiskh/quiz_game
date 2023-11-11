@@ -23,11 +23,13 @@
   const barPercentage = computed(() => `${currentQuestionIndex.value/quiz["questions"].length * 100}%`)
 
   const onOptionSelected = (isCorrect) => {
-    if (isCorrect){
-      numberOfCorrectAnswers.value++;
-    }
+    if (isCorrect) numberOfCorrectAnswers.value++;
 
-    if (quiz["questions"].length -1 === currentQuestionIndex.value)
+    console.log(quiz["questions"].length - 1 === currentQuestionIndex.value)
+
+    if (quiz["questions"].length - 1 === currentQuestionIndex.value)
+      showResult.value = true
+
 
     currentQuestionIndex.value++
   }

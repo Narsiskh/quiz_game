@@ -17,7 +17,10 @@
     </h1>
   </div>
   <div class="options-container">
-    <div v-for="option in question.options" :key="option.id" class="option" @click="emitSelectedOption(option.isCorrect)">
+    <div v-for="option in question.options"
+         :key="option.id" class="option"
+         @click="emitSelectedOption(option['isCorrect'])"
+    >
       <p class="option-label">{{option.label}}</p>
       <div class="option-value">
         <p>{{option.text}}</p>

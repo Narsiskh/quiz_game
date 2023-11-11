@@ -9,7 +9,7 @@
   <div class="results">
     <p>Your Results...</p>
     <h1>
-      4/8
+      {{numberOfCorrectAnswers}}/{{quizQuestionLength}}
     </h1>
     <RouterLink to="/">Go Back</RouterLink>
   </div>
